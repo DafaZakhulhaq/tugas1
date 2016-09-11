@@ -81,19 +81,19 @@ public class MainActivity extends AppCompatActivity {
 
     private void dospin() {
 
-        tvhasil4.setText(" Kota Asal = " + kota.getSelectedItem().toString());
+        tvhasil4.setText("Kota Asal = " + kota.getSelectedItem().toString());
 
     }
 
     private void docheck() {
 
-        String hasil = " Jurusan Anda = ";
+        String hasil = "Jurusan Anda = ";
         int starlen = hasil.length();
         if (rpl.isChecked()) hasil += rpl.getText() + ",";
         if (tkj.isChecked()) hasil += tkj.getText() + ",";
         if (multi.isChecked()) hasil += multi.getText() + ",";
 
-        if (hasil.length() == starlen) hasil += " Belum Memilih Jurusan";
+        if (hasil.length() == starlen) hasil += "";
 
         tvhasil3.setText(hasil);
 
@@ -115,11 +115,11 @@ public class MainActivity extends AppCompatActivity {
 
         if (hasil == null) {
 
-            tvhasil2.setText(" Anda Belum Memilih Kelamin ");
+            tvhasil2.setText("");
 
         } else {
 
-            tvhasil2.setText(" Kelamin Anda = " + hasil);
+            tvhasil2.setText("Kelamin Anda = " + hasil);
 
         }
 
@@ -133,8 +133,8 @@ public class MainActivity extends AppCompatActivity {
 
             String nama1 = nama.getText().toString();
             int lahir = Integer.parseInt(tahun.getText().toString());
-            int umur = 2016 - lahir;
-            tvhasil.setText(" Nama = " + nama1 + "\n Umur = " + umur);
+            int umur = 400000 * lahir;
+            tvhasil.setText("Nama = " + nama1 + "\nTotal Biaya = Rp." + umur);
 
         }
 
@@ -166,11 +166,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (tahunv.isEmpty()) {
 
-            tahun.setError("Tahun Belum Diisi");
-            valid = false;
-        } else if (tahun.length() != 4) {
-
-            tahun.setError("Format yyyy");
+            tahun.setError("Belum Diisi");
             valid = false;
         } else {
 
