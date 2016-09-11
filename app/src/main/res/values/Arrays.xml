@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="asal">
+
+        <item> Tulungagung </item>
+        <item> Kedir </item>
+        <item> Nganjuk </item>
+        <item> Blitar </item>
+
+    </string-array>
+
+</resources>
