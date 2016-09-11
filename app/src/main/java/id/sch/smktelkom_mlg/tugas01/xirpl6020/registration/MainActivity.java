@@ -15,10 +15,11 @@ public class MainActivity extends AppCompatActivity {
 
     EditText nama, tahun;
     TextView tvhasil, tvhasil2, tvhasil3, tvhasil4;
-    Button sign;
+    Button sign, resetd;
     RadioGroup rg;
     CheckBox rpl, tkj, multi;
     Spinner kota;
+    RadioButton lk, pr;
 
 
     @Override
@@ -37,8 +38,31 @@ public class MainActivity extends AppCompatActivity {
         tvhasil3 = (TextView) findViewById(R.id.hasil3);
         tvhasil4 = (TextView) findViewById(R.id.hasil4);
         kota = (Spinner) findViewById(R.id.spinner);
+        lk = (RadioButton) findViewById(R.id.radioButton);
+        pr = (RadioButton) findViewById(R.id.radioButton2);
 
 
+        findViewById(R.id.reset).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                nama.setText("");
+                tahun.setText("");
+
+                lk.setChecked(false);
+                pr.setChecked(false);
+
+                rpl.setChecked(false);
+                tkj.setChecked(false);
+                multi.setChecked(false);
+
+                tvhasil.setText("");
+                tvhasil2.setText("");
+                tvhasil3.setText("");
+                tvhasil4.setText("");
+
+            }
+        });
 
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         if (tkj.isChecked()) hasil += tkj.getText() + ",";
         if (multi.isChecked()) hasil += multi.getText() + ",";
 
-        if (hasil.length() == starlen) hasil += " Nada Belum Memilih Jurusan";
+        if (hasil.length() == starlen) hasil += " Belum Memilih Jurusan";
 
         tvhasil3.setText(hasil);
 
