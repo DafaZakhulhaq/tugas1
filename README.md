@@ -8,9 +8,10 @@ User akan mengisikan nama, jumlah bulan yang akan dibayar, asal kota, jenis kela
 nama dan jumlah bulan saya beri validasi
 ada 2 button : <br />
     1. (Bayar) akan menampilkan data yang sudah diisikan oleh user
+    <br />
     2. (Reset) akan mereset semua data yang akan diisi oleh user
     
-
+<br />
 [Link APK](https://drive.google.com/file/d/0B0ks9RtVQyzPU3BjRG5tNS1yb2s/view)
 <br />    
     
